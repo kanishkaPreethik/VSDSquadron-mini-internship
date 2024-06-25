@@ -29,7 +29,7 @@
 
 # ![ec747c67-06a4-414c-a86d-109c9aa5582e](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/3bca360a-7a9f-4d37-92e8-d10e417033be)
 
-# The coding  part 
+# The coding and output part 
 
 ![Screenshot from 2024-06-25 19-18-21](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/f6ae3f18-4d4c-4fd5-aa4d-650d79bbac73)
 ![Screenshot from 2024-06-25 19-18-49](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/8b602135-ed90-44b6-b37b-ce2d4d589139)
