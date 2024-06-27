@@ -2,7 +2,7 @@
 
 # The snap of the code :
 
-![Screenshot 2024-06-27 201705](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/2786db04-d35b-46ac-845c-b76698c35875)
+![Screenshot 2024-06-27 201705](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/a03c1367-3d31-40dc-a479-6fa89969de2b)
 
 #the output from c language GCC and RISC-V GCC:
 
