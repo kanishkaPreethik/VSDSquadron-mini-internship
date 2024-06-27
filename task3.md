@@ -2,11 +2,11 @@
 
 # The snap of the code :
 
-![Screenshot 2024-06-27 201705](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/a03c1367-3d31-40dc-a479-6fa89969de2b)
+![Screenshot 2024-06-27 201705](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/c659772a-82d7-42d3-b7fb-16eab8c4ec80)
 
 # the output from c language GCC and RISC-V GCC:
 
-![Screenshot 2024-06-27 202122](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/22a9542b-c6ea-4ff2-89ff-7019153705c0)
+![Screenshot 2024-06-27 204911](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/e137a2f7-340d-4faf-bde2-fb480396389c)
 
 # Now we can see both the outputs are same.
 
