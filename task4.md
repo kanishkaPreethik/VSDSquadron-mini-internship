@@ -59,7 +59,7 @@ funct3 (function - 3) is the field after the destination register .This field is
 
   ![image](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/24d50e05-bd01-4f5c-9cee-b7595d445dfb)
 
-  I-TYPE INSTRUCTION
+# 2.I-TYPE INSTRUCTION
   
 * I stands for immediate in I-type instruction, indiactes the operations are executed using register and immediate values and are not depends on memory.
 * The upper 12 bits of I-type is an immediate number.
@@ -68,7 +68,7 @@ funct3 (function - 3) is the field after the destination register .This field is
  ![image](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/1ddeaab2-f21d-418f-9525-b3130b2f07a6)
 
 
-# S-TYPE INSTRUCTION 
+# 3.S-TYPE INSTRUCTION 
 
 * The characteristic of S-type instruction is that there is no rd register. In this type of instruction, the immediate is divided into two parts, the first part is in bit11-5, and the second part is in bit4-0. The 5 bits of the immediate 4-0 occupy the position of rd in other instruction formats, and 5-11 occupy the position of funct7.
 
@@ -76,7 +76,7 @@ funct3 (function - 3) is the field after the destination register .This field is
 
 ![image](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/15fb0d18-9f56-4a19-a231-9bda49d1ca9f)
 
-# B-TYPE INSTRUCTION 
+# 4.B-TYPE INSTRUCTION 
 
 * B-type instructions are mainly used as branch instructions, but they are conditional Branch. It means to decide whether to jump or not need to depend on whether the condition is valid. The B-type machine code structure is shown in Figure 2-1.
 * The instruction does not include rd register and funct7, but contains rs1, rs2, funct3 and immediate. The immediate is divided into two areas. The encoding of B-type instruction immediate is out of order. The reason is not described in detail here.
@@ -84,7 +84,7 @@ funct3 (function - 3) is the field after the destination register .This field is
 
 ![image](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/5a9bdf3c-0397-4850-b839-11a7e9f16fe5)
 
-# U-TYPE INSTRUCTION 
+# 5.U-TYPE INSTRUCTION 
 
 * A 20-bit immediate is provided in the U-type instruction.
 * The final operation result is related to the 20-bit immediate, and the result is written back to the rd register.
@@ -93,7 +93,7 @@ funct3 (function - 3) is the field after the destination register .This field is
 
 ![image](https://github.com/kanishka-preethi/VSDSquadron-mini-internship/assets/173462509/9326cf90-4799-471b-8a17-bce16f3cf1c2)
 
-# J-TYPE INSTRUCTION
+# 6.J-TYPE INSTRUCTION
 
 * The format of this instruction is very similar to U-type, it only have Rd register and immediate and opcode. 
 * At the same time, the immediate of J-type is also disrupted. That means that the CPU must first put the immediate numbers together to restore the original immediate numbers when decoding.
