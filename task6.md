@@ -47,117 +47,168 @@ Pin diagram for common cathode seven segment led:
 # Code uploaded on board 
 
 // #include <stdio.h>
+
 #include <ch32v00x.h>
+
 #include <debug.h>
 
 // Define the GPIO pins for the driver
 
 #define a GPIO_Pin_0        // Pin for segment a
+
 #define b GPIO_Pin_0        // Pin for segment b
+
 #define c GPIO_Pin_2        // Pin for segment c
+
 #define d GPIO_Pin_3        // Pin for segment d      
+
 #define e GPIO_Pin_4        // Pin for segment e    
+
 #define f GPIO_Pin_5        // Pin for segment f    
+
 #define g GPIO_Pin_6        // Pin for segment g    
 
 int outar[] = {0,0,0,0,0,0,0};
+
 int out[] = {126 , 48, 109, 121, 51, 91, 95, 112, 127, 123, 119, 31, 78, 61, 79, 71};
 
 // Function prototypes
+
 void GPIO_Config(void);
+
 void assign(int);
 
 // GPIO configuration function
+
 void GPIO_Config(void) {
+    
     GPIO_InitTypeDef GPIO_InitStructure = {0};
 
 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE); // Enable clock for Port D
+   
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE); // Enable clock for Port C
 
     // Configure pin a as output
 
     GPIO_InitStructure.GPIO_Pin = a;
+    
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
     // Configure pin b as output
 
     GPIO_InitStructure.GPIO_Pin = b;
+    
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 
     // Configure pin c as output
 
     GPIO_InitStructure.GPIO_Pin = c;
+    
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
     // Configure pin d as output
 
     GPIO_InitStructure.GPIO_Pin = d;
+    
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
     // Configure pin e as output
 
     GPIO_InitStructure.GPIO_Pin = e;
+    
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
     // Configure pin f as output
 
     GPIO_InitStructure.GPIO_Pin = f;
+    
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
     // Configure pin g as output
 
     GPIO_InitStructure.GPIO_Pin = g;
+    
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 }
 
 int main()
 {
    // SystemCoreClockUpdate();
+    
     Delay_Init();
+    
     GPIO_Config();
+  
   while(1)
   {
+  
     for(int i = 0; i < 16; i++)
+    
     {
+        
         assign(i);
+    
         if(outar[6]==1)
+        
         GPIO_WriteBit(GPIOD, a, SET);
+        
         else
+        
         GPIO_WriteBit(GPIOD, a, RESET);
 
         if(outar[5]==1)
+        
         GPIO_WriteBit(GPIOC, b, SET);
+        
         else
+        
         GPIO_WriteBit(GPIOC, b, RESET);
        
         if(outar[4]==1)
+        
         GPIO_WriteBit(GPIOD, c, SET);
+        
         else
+        
         GPIO_WriteBit(GPIOD, c, RESET);
        
         if(outar[3]==1)
+        
         GPIO_WriteBit(GPIOD, d, SET);
+        
         else
+        
         GPIO_WriteBit(GPIOD, d, RESET);
        
         if(outar[2]==1)
+        
         GPIO_WriteBit(GPIOD, e, SET);
+        
         else
+        
         GPIO_WriteBit(GPIOD, e, RESET);
        
         if(outar[1]==1)
+        
         GPIO_WriteBit(GPIOD, f, SET);
+        
         else
+        
         GPIO_WriteBit(GPIOD, f, RESET);
        
-       
         if(outar[0]==1)
+       
         GPIO_WriteBit(GPIOD, g, SET);
+        
         else
+        
         GPIO_WriteBit(GPIOD, g, RESET);
+        
         Delay_Ms(5000);
     }
     return 0;
@@ -165,17 +216,27 @@ int main()
 }
 
 void assign(int num)
+
 {
+    
     int mask = 1;
+    
     for( int i = 0; i<7; i++)
+    
     {
+    
         if((mask & out[num]) == 0)
+          
             outar[i] = 0;
+        
         else
+        
             outar[i] = 1;
+        
         mask = mask<<1;
     }
 }
 
+https://drive.google.com/file/d/1ciw1Q3YRP-sy-tQUtL7dusIJojEHvL-m/view?usp=drivesdk
 
 # Task 6 completed 
